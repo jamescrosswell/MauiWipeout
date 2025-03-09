@@ -26,7 +26,7 @@ public partial class MainPage : ContentPage
 		var json = JsonSerializer.Serialize(loginData);
 
 		using var client = _httpClientFactory.CreateClient();
-		// TODO: We should really use async here, and maybe use a third party for authentication
+		// TODO: We should probably use a third party for authentication
 		var response = await client.SendAsync(new HttpRequestMessage(HttpMethod.Post, _loginUrl)
 		{
 			Content = new StringContent(json, Encoding.UTF8, "application/json")
