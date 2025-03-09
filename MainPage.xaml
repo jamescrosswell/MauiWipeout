@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiWipeout.MainPage"
+             BackgroundColor="#301C34">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Border StrokeShape="RoundRectangle 10" Margin="0,20,0,0" Stroke="Transparent">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#301C34" Offset="0.0" />
+                        <GradientStop Color="BlueViolet" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <VerticalStackLayout Padding="40">
+                    <Image
+                        Source="sentry_logo.png"
+                        HeightRequest="185"
+                        Aspect="AspectFit"
+                        SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+
+                    <Label
+                        Text="Sentry MAUI"
+                        Style="{StaticResource Headline}"
+                        SemanticProperties.HeadingLevel="Level1" 
+                        TextColor="White" />
+
+                    <Label
+                        Text="When Code Breaks, Fix it Faster with Sentry"
+                        Style="{StaticResource SubHeadline}"
+                        TextColor="White"
+                        SemanticProperties.HeadingLevel="Level2"
+                        SemanticProperties.Description="When Code Breaks, Fix it Faster with Sentry" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Border StrokeShape="RoundRectangle 10" Margin="0,20,0,0" Stroke="Transparent">
+                <Border.Background>
+                    <SolidColorBrush Color="#301C34" />
+                    <!-- <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="MidnightBlue" Offset="0.0" />
+                        <GradientStop Color="BlueViolet" Offset="1.0" />
+                    </LinearGradientBrush> -->
+                </Border.Background>
+
+                <VerticalStackLayout Padding="30,20" Spacing="15">
+                    <Entry
+                        x:Name="UsernameEntry"
+                        Placeholder="Username"
+                        SemanticProperties.Description="Enter your username"
+                        BackgroundColor="White"
+                        HorizontalOptions="Fill" />
+
+                    <Entry
+                        x:Name="PasswordEntry"
+                        Placeholder="Password"
+                        IsPassword="True"
+                        SemanticProperties.Description="Enter your password"
+                        BackgroundColor="White"
+                        HorizontalOptions="Fill" />
+
+                    <Button
+                        x:Name="LoginButton"
+                        Text="Login"
+                        SemanticProperties.Hint="Logs you into the application"
+                        BackgroundColor="#FFECB771"
+                        TextColor="Black"
+                        Clicked="OnLoginButtonClicked"
+                        HorizontalOptions="Fill" />
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
