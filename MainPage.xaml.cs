@@ -10,6 +10,10 @@ public partial class MainPage : ContentPage
 	// TODO: This needs to be wired up to a real authentication system
 	const string _loginUrl = "https://localhost:5001/api/auth/login";
 
+	public MainPage() : this(new SentryHttpClientFactory())
+	{		
+	}
+
     public MainPage(IHttpClientFactory httpClientFactory)
 	{
         _httpClientFactory = httpClientFactory;

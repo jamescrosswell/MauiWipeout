@@ -28,8 +28,4 @@ public static class MauiProgram
 		return builder.Build();
 	}
 
-	class SentryHttpClientFactory : IHttpClientFactory
-	{
-		public HttpClient CreateClient(string name) => new HttpClient(new SentryHttpMessageHandler());
-	}
 }
