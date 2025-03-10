@@ -2,77 +2,72 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiWipeout.MainPage"
-             BackgroundColor="#301C34">
+             BackgroundColor="#512BD4">
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            <Border StrokeShape="RoundRectangle 10" Margin="0,20,0,0" Stroke="Transparent">
-                <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                        <GradientStop Color="#301C34" Offset="0.0" />
-                        <GradientStop Color="BlueViolet" Offset="1.0" />
-                    </LinearGradientBrush>
-                </Border.Background>
-                <VerticalStackLayout Padding="40">
-                    <Image
-                        Source="sentry_logo.png"
-                        HeightRequest="185"
-                        Aspect="AspectFit"
-                        SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+        <Grid Padding="10,0" RowSpacing="10" ColumnSpacing="0" VerticalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-                    <Label
-                        Text="Sentry MAUI"
-                        Style="{StaticResource Headline}"
-                        SemanticProperties.HeadingLevel="Level1" 
-                        TextColor="White" />
+            <Label
+                Grid.Row="0"
+                Grid.ColumnSpan="2"
+                Text="Wipeout"
+                Style="{StaticResource Headline}"
+                TextColor="White"
+                HorizontalOptions="Center"
+                SemanticProperties.HeadingLevel="Level1"
+                SemanticProperties.Description="Wipeout" />
 
-                    <Label
-                        Text="When Code Breaks, Fix it Faster with Sentry"
-                        Style="{StaticResource SubHeadline}"
-                        TextColor="White"
-                        SemanticProperties.HeadingLevel="Level2"
-                        SemanticProperties.Description="When Code Breaks, Fix it Faster with Sentry" />
-                </VerticalStackLayout>
-            </Border>
+            <Image
+                Grid.Row="1"
+                Grid.Column="0"
+                Source="wipeout.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="MAUI wipeout banner" />
 
-            <Border StrokeShape="RoundRectangle 10" Margin="0,20,0,0" Stroke="Transparent">
-                <Border.Background>
-                    <SolidColorBrush Color="#301C34" />
-                    <!-- <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                        <GradientStop Color="MidnightBlue" Offset="0.0" />
-                        <GradientStop Color="BlueViolet" Offset="1.0" />
-                    </LinearGradientBrush> -->
-                </Border.Background>
+            <Grid Grid.Row="1" Grid.Column="1" Padding="30,20" RowSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
 
-                <VerticalStackLayout Padding="30,20" Spacing="15">
-                    <Entry
-                        x:Name="UsernameEntry"
-                        Placeholder="Username"
-                        SemanticProperties.Description="Enter your username"
-                        BackgroundColor="White"
-                        HorizontalOptions="Fill" />
+                <Entry
+                    Grid.Row="0"
+                    x:Name="UsernameEntry"
+                    Placeholder="Username"
+                    SemanticProperties.Description="Enter your username"
+                    BackgroundColor="White"
+                    HorizontalOptions="FillAndExpand" />
 
-                    <Entry
-                        x:Name="PasswordEntry"
-                        Placeholder="Password"
-                        IsPassword="True"
-                        SemanticProperties.Description="Enter your password"
-                        BackgroundColor="White"
-                        HorizontalOptions="Fill" />
+                <Entry
+                    Grid.Row="1"
+                    x:Name="PasswordEntry"
+                    Placeholder="Password"
+                    IsPassword="True"
+                    SemanticProperties.Description="Enter your password"
+                    BackgroundColor="White"
+                    HorizontalOptions="FillAndExpand" />
 
-                    <Button
-                        x:Name="LoginButton"
-                        Text="Login"
-                        SemanticProperties.Hint="Logs you into the application"
-                        BackgroundColor="#FFECB771"
-                        TextColor="Black"
-                        Clicked="OnLoginButtonClicked"
-                        HorizontalOptions="Fill" />
-                </VerticalStackLayout>
-            </Border>
-        </VerticalStackLayout>
-    </ScrollView>
+                <Button
+                    Grid.Row="2"
+                    x:Name="LoginButton"
+                    Text="Login"
+                    SemanticProperties.Hint="Logs you into the application"
+                    BackgroundColor="#FFECB771"
+                    TextColor="Black"
+                    Clicked="OnLoginButtonClicked"
+                    HorizontalOptions="FillAndExpand" />
+            </Grid>
+        </Grid>     </ScrollView>
 
 </ContentPage>
