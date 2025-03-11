@@ -73,7 +73,7 @@
 	<VersionSuffix>alpha.2</VersionSuffix>
 	<SentrySetCommits>true</SentrySetCommits>
     <SentryUploadSymbols>true</SentryUploadSymbols>
-    <EmbedAllSources>true</EmbedAllSources>
+    <SentryUploadSources>true</SentryUploadSources>
   </PropertyGroup>
 
 </Project>
