@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net8.0-android;net9.0-ios;net9.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks>net8.0-android;net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net9.0-windows10.0.19041.0</TargetFrameworks>
 
 		<!-- Note for MacCatalyst:
@@ -60,7 +60,7 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
-		<PackageReference Include="Sentry.Maui" Version="5.2.0" />
+		<PackageReference Include="Sentry.Maui" Version="5.3.0" />
 	</ItemGroup>
 
   <PropertyGroup>
@@ -73,7 +73,7 @@
 	<VersionSuffix>alpha.2</VersionSuffix>
 	<SentrySetCommits>true</SentrySetCommits>
     <SentryUploadSymbols>true</SentryUploadSymbols>
-    <SentryUploadSources>true</SentryUploadSources>
+    <EmbedAllSources>true</EmbedAllSources>
   </PropertyGroup>
 
 </Project>
