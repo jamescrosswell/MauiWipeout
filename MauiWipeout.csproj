@@ -67,10 +67,10 @@
 	<!-- Sentry CLI settings -->
   	<UseSentryCLI>true</UseSentryCLI>
     <SentryOrg>sentry-sdks</SentryOrg>
-    <SentryProject>sentry-dotnet</SentryProject>
+    <SentryProject>dotnet-maui</SentryProject>
 	<SentryCreateRelease>true</SentryCreateRelease>
 	<VersionPrefix>1.0.0</VersionPrefix>
-	<VersionSuffix>alpha.1</VersionSuffix>
+	<VersionSuffix>alpha.2</VersionSuffix>
 	<SentrySetCommits>true</SentrySetCommits>
     <SentryUploadSymbols>true</SentryUploadSymbols>
     <SentryUploadSources>true</SentryUploadSources>

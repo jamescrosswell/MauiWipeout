@@ -11,7 +11,7 @@ public static class MauiProgram
 			.UseMauiApp<App>()
 			.UseSentry(options =>
 			{
-				options.Dsn = "https://eb18e953812b41c3aeb042e666fd3b5c@o447951.ingest.sentry.io/5428537";
+				options.Dsn = "https://cc8aa9a0be20947945daf0d826745de8@o447951.ingest.us.sentry.io/4508956483518465";
 				options.Debug = true;
 				options.AttachScreenshot = true;
 			})
